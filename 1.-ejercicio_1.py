@@ -5,9 +5,15 @@
 
 
 barrasvendidasañejas = int(input("Ingrese el numero de barras vendidas que no son del dia:"))
-print("El precio habitual de una barra de pan es de 3.49€")
-print("las barras de pan del dia anterior tiene un descuento de 60%")
-barrasvendidasañejascondescuento =str (barrasvendidasañejas * 0.60)
-print("el coste final € " + barrasvendidasañejascondescuento + " Euros")
+precio = 3.49
+descuento = 0.6
+descuento_porcentual = 0.6 * 100
+coste = barrasvendidasañejas * precio * (1 - descuento)
+print("precio de barra de pan: " + str(precio))
+print("descuento de barra de pan no frescas: " + str(descuento_porcentual))
+print("Coste final: " + str(round(coste, 2)))
+
+
+
 
 

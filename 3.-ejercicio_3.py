@@ -6,28 +6,31 @@
 #Peso Mexicano a dólar: 20
 #Peso Argentino a dólar: 115
 
-print("1 de pesos mexicanos a dolares")
-print("2 de pesos chilenos a dolares")
-print("3 de pesos argentinos a dolares")
-print ("")
-hl=int(input("coloque aqui opcion"))
-print ("")
-if hl==1:
-    pesm=int(input("introdusca cantidad de pesos mexicanos"))
-    dol1=pesm*855
-    print ("")
-    print ("dolares=", pesm)
-if hl==2:
-    pesc=float(input("introdusca pesos chilenos"))
-    dol2=pesc*20
-    print("")
-    print("dolares=", dol2)
-if hl==3:
-    pesa=int(input("introdusca cantidad de pesos argentinos"))
-    dol3=pesa*1.18
-    print("")
-    print("dolares=", dol3)
-    print("")
+print("""Seleccione la moneda desde la cual convertir  a dolares:
+1 peso chileno
+2 peso mexicano
+3 peso argetino""")
+opcion = int(input("ingrese la opcion: "))
+dinero = int(input("Ingrese la capital a convertir: "))
+
+if opcion == 1:
+    tipo_cambio = "pesos chilenos"
+    cambio = 855
+    dolares = dinero / cambio
+    dolares = round(dolares, 2)
+elif opcion == 2:
+    tipo_cambio = "Pesos mexicanos"
+    cambio = 20
+    dolares = dinero / cambio
+    dolares = round(dolares, 2)
+elif opcion ==3:
+    tipo_cambio = "pesos argentinos"
+    cambio = 115
+    dolares = dinero / cambio
+    dolares = round(dolares, 2)
+    print("convirtio " + str(dinero) + " " + tipo_cambio + " a dolares y el total es: " + str(dolares))
+
+    
 
 
 
